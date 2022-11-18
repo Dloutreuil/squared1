@@ -16,8 +16,8 @@ public class GridDeplacement : MonoBehaviour
         Vector3 movement = new Vector3(x, 0, z);
 
         //Debug.Log(x);
-
-        if (!isMoving && (x != 0 || z != 0)) StartCoroutine(MovePlayer(movement.normalized));
+        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.LeftArrow))
+            if (!isMoving && (x != 0 || z != 0)) StartCoroutine(MovePlayer(movement.normalized));
     }
 
     IEnumerator MovePlayer(Vector3 dir)
@@ -44,7 +44,6 @@ public class GridDeplacement : MonoBehaviour
         }
         startPos = Vector3.zero;
         endPos = Vector3.zero;
-
         //return Vector3;
         isMoving = false;
     }
