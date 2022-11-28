@@ -6,7 +6,7 @@ public class SwipeTest : MonoBehaviour
 {
     public Swipe swipeControls;
     public Transform player;
-    private Vector3 desiredPosition;
+    public Vector3 desiredPosition;
 
     private void Update()
     {
